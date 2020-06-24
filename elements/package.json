@@ -1,0 +1,25 @@
+{
+  "name": "elements-poc",
+  "version": "0.0.11",
+  "description": "UI Elements Library PoC",
+  "main": "dist/legacy/index.js",
+  "module": "dist/legacy/index.mjs",
+  "types": "dist/legacy/types/index.d.ts",
+  "collection": "dist/legacy/collection/collection-manifest.json",
+  "files": [
+    "dist/legacy",
+    "dist/prod"
+  ],
+  "scripts": {
+    "build": "([ -d dist/ ] && rm -r dist); stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "dependencies": {
+    "@stencil/core": "^1.15.0-4",
+    "@stencil/sass": "^1.3.2"
+  },
+  "license": "MIT"
+}
